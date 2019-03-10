@@ -32,7 +32,6 @@ public class DatabaseIncome {
             }
         }
     }
-
     public double sumNettoIncome() {
         double sumNettoIncome = 0;
         for (int i = 0; i < incomes.length; i++) {
@@ -42,6 +41,18 @@ public class DatabaseIncome {
         }
         //System.out.println("Netto cost sum:" + sumNettoIncome);
         return sumNettoIncome;
+    }
+    public double sumVatIncome(){
+        //nettoincome - nettocost
+        double sumVatIncome = 0;
+        for (int i = 0; i < incomes.length; i++) {
+            if (incomes[i] != null) {
+                sumVatIncome += incomes[i].getBruttoIncome()*incomes[i].getVatIncome();
+            }
+        }
+        //System.out.println("Netto cost sum:" + sumNettoCost);
+        return sumVatIncome;
+
     }
 
 

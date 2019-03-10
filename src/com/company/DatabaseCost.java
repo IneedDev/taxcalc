@@ -44,4 +44,19 @@ public class DatabaseCost {
 
     }
 
+    public double sumVatCost(){
+        //nettoincome - nettocost
+
+        double sumVatCost = 0;
+        for (int i = 0; i < costs.length; i++) {
+            if (costs[i] != null) {
+                sumVatCost += costs[i].getBruttoCost()*costs[i].getVatCost();
+            }
+        }
+        //System.out.println("Netto cost sum:" + sumNettoCost);
+        return sumVatCost;
+
+    }
+
+
 }

@@ -51,7 +51,8 @@ public class Menu {
                     databaseIncome.sumNettoIncome();
                     databaseCost.sumNettoCost();
                     System.out.println("Income Tax: "+(databaseIncome.sumNettoIncome()-databaseCost.sumNettoCost())*0.18);
-                    System.out.println("Income Tax: "+(databaseIncome.sumNettoIncome()-databaseCost.sumNettoCost())*0.18);
+                    System.out.println("Vat to pay: "+((databaseCost.sumVatCost()+databaseIncome.sumVatIncome())-databaseCost.sumNettoCost());
+
                     break;
                 case 4:
                     System.out.println("Exit");
